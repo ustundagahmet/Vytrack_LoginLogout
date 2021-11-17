@@ -1,14 +1,14 @@
 Feature: User should be able to login
   @wip
-  Scenario Outline: Different user types
+  Scenario Outline: Different user types "<userType>"
     Given the user is on the login page
-    When the user types username "<userName>" and password "<password>"
-    Then the user should be able to see "<pageTitle>" page
+    When the user logins with username "<userName>" and password "<password>"
+    Then the "<userType>" should be able to see "<pageTitle>" page
 
 
 
     Examples:
-    | pageTitle        | userName        | password    |
-    | Quick Launchpad | user10          | UserUser123 |
-    | Dashboard       | storemanager60  | UserUser123 |
-    | Dashboard       | salesmanager110 | UserUser123 |
+    | userType        | userName        | password     | pageTitle        |
+    | Truck driver    | user10          | UserUser123  | Quick Launchpad  |
+    | Store manager   | storemanager60  | UserUser123  | Dashboard        |
+    | Sales manager   | salesmanager110 | UserUser123  | Dashboard        |

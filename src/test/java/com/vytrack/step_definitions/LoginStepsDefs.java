@@ -16,7 +16,9 @@ import org.junit.Assert;
 public class LoginStepsDefs {
 
     LoginPage loginPage = new LoginPage();
-    BasePage basePage = new BasePage();
+    Dashboard dashboard = new Dashboard();
+    QuickLaunchpadPage quickLaunchpadPage = new QuickLaunchpadPage();
+
 
 
     @Given("the user is on the login page")
@@ -26,24 +28,31 @@ public class LoginStepsDefs {
 
     }
 
-    @When("the user types username {string} and password {string}")
-    public void the_user_types_username_and_password(String userName, String password) {
+    @When("the user logins with username {string} and password {string}")
+    public void the_user_logins_with_username_and_password(String userName, String password) {
 
         loginPage.login(userName, password);
-    }
-
-    @Then("the user should be able to see {string} page")
-    public void the_user_should_be_able_to_see_page(String pageTitle) {
-        BrowserUtils.waitFor(5);
-
-        String actualpageSubTitle = basePage.pageSubTitle.getText();
-
-        Assert.assertEquals("Title is not matching", actualpageSubTitle, pageTitle);
-
 
     }
 
+    @Then("the {string} should be able to see {string} page")
+    public void the_should_be_able_to_see_page(String userType, String expectedPageSubTitle) {
 
+        BrowserUtils.waitFor(3);
 
+        if(userType.equals("Truck driver")){
 
+            String actualpageSubTitle = quickLaunchpadPage.pageSubTitle.getText();
+
+            Assert.assertEquals("Title is not matching", actualpageSubTitle, expectedPageSubTitle);
+
+        } else if(userType.equals("Store manager") || userType.equals("Store manager")){
+
+            String actualpageSubTitle = dashboard.pageSubTitle.getText();
+
+            Assert.assertEquals("Title is not matching", actualpageSubTitle, expectedPageSubTitle);
+
+        }
+
+    }
 }

@@ -5,7 +5,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Different user types",
+  "name": "Different user types \"\u003cuserType\u003e\"",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -19,11 +19,11 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "the user types username \"\u003cuserName\u003e\" and password \"\u003cpassword\u003e\"",
+  "name": "the user logins with username \"\u003cuserName\u003e\" and password \"\u003cpassword\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "name": "the user should be able to see \"\u003cpageTitle\u003e\" page",
+  "name": "the \"\u003cuserType\u003e\" should be able to see \"\u003cpageTitle\u003e\" page",
   "keyword": "Then "
 });
 formatter.examples({
@@ -33,36 +33,40 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "pageTitle",
+        "userType",
         "userName",
-        "password"
+        "password",
+        "pageTitle"
       ]
     },
     {
       "cells": [
-        "Quick Launchpad",
+        "Truck driver",
         "user10",
-        "UserUser123"
+        "UserUser123",
+        "Quick Launchpad"
       ]
     },
     {
       "cells": [
-        "Dashboard",
+        "Store manager",
         "storemanager60",
-        "UserUser123"
+        "UserUser123",
+        "Dashboard"
       ]
     },
     {
       "cells": [
-        "Dashboard",
+        "Sales manager",
         "salesmanager110",
-        "UserUser123"
+        "UserUser123",
+        "Dashboard"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Different user types",
+  "name": "Different user types \"Truck driver\"",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -82,21 +86,21 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user types username \"user10\" and password \"UserUser123\"",
+  "name": "the user logins with username \"user10\" and password \"UserUser123\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_types_username_and_password(java.lang.String,java.lang.String)"
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_logins_with_username_and_password(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user should be able to see \"Quick Launchpad\" page",
+  "name": "the \"Truck driver\" should be able to see \"Quick Launchpad\" page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_should_be_able_to_see_page(java.lang.String)"
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_should_be_able_to_see_page(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -106,7 +110,7 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Different user types",
+  "name": "Different user types \"Store manager\"",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -126,21 +130,21 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user types username \"storemanager60\" and password \"UserUser123\"",
+  "name": "the user logins with username \"storemanager60\" and password \"UserUser123\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_types_username_and_password(java.lang.String,java.lang.String)"
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_logins_with_username_and_password(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user should be able to see \"Dashboard\" page",
+  "name": "the \"Store manager\" should be able to see \"Dashboard\" page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_should_be_able_to_see_page(java.lang.String)"
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_should_be_able_to_see_page(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -150,7 +154,7 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Different user types",
+  "name": "Different user types \"Sales manager\"",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -170,21 +174,21 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user types username \"salesmanager110\" and password \"UserUser123\"",
+  "name": "the user logins with username \"salesmanager110\" and password \"UserUser123\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_types_username_and_password(java.lang.String,java.lang.String)"
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_logins_with_username_and_password(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user should be able to see \"Dashboard\" page",
+  "name": "the \"Sales manager\" should be able to see \"Dashboard\" page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_should_be_able_to_see_page(java.lang.String)"
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_should_be_able_to_see_page(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
