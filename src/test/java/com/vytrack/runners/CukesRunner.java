@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features/Login.feature",
         glue = "com/vytrack/step_definitions",
-        dryRun = true,
+        dryRun = false,
         tags = "@wip"
 )
 public class CukesRunner {

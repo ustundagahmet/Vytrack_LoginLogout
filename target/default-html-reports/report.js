@@ -15,7 +15,7 @@ formatter.scenarioOutline({
   ]
 });
 formatter.step({
-  "name": "the user logs in as \"\u003cuserType\u003e\"",
+  "name": "the user is on the login page",
   "keyword": "Given "
 });
 formatter.step({
@@ -23,11 +23,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "name": "the user presses the \"Submit\" button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "the user should be able to see \"Basepage\"",
+  "name": "the user should be able to see \"\u003cpageTitle\u003e\" page",
   "keyword": "Then "
 });
 formatter.examples({
@@ -37,28 +33,28 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "userType",
+        "pageTitle",
         "userName",
         "password"
       ]
     },
     {
       "cells": [
-        "Truck driver",
+        "Quick Launchpad",
         "user10",
         "UserUser123"
       ]
     },
     {
       "cells": [
-        "Store manager",
+        "Dashboard",
         "storemanager60",
         "UserUser123"
       ]
     },
     {
       "cells": [
-        "Sales manager",
+        "Dashboard",
         "salesmanager110",
         "UserUser123"
       ]
@@ -76,36 +72,38 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "the user logs in as \"Truck driver\"",
+  "name": "the user is on the login page",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_is_on_the_login_page()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "the user types username \"user10\" and password \"UserUser123\"",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_types_username_and_password(java.lang.String,java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "the user presses the \"Submit\" button",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "the user should be able to see \"Basepage\"",
+  "name": "the user should be able to see \"Quick Launchpad\" page",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_should_be_able_to_see_page(java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded0.png", "screenshot");
+formatter.after({
+  "status": "passed"
 });
 formatter.scenario({
   "name": "Different user types",
@@ -118,36 +116,38 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "the user logs in as \"Store manager\"",
+  "name": "the user is on the login page",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_is_on_the_login_page()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "the user types username \"storemanager60\" and password \"UserUser123\"",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_types_username_and_password(java.lang.String,java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "the user presses the \"Submit\" button",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "the user should be able to see \"Basepage\"",
+  "name": "the user should be able to see \"Dashboard\" page",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_should_be_able_to_see_page(java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded1.png", "screenshot");
+formatter.after({
+  "status": "passed"
 });
 formatter.scenario({
   "name": "Different user types",
@@ -160,35 +160,37 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "the user logs in as \"Sales manager\"",
+  "name": "the user is on the login page",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_is_on_the_login_page()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "the user types username \"salesmanager110\" and password \"UserUser123\"",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_types_username_and_password(java.lang.String,java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "the user presses the \"Submit\" button",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "the user should be able to see \"Basepage\"",
+  "name": "the user should be able to see \"Dashboard\" page",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepsDefs.the_user_should_be_able_to_see_page(java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded2.png", "screenshot");
+formatter.after({
+  "status": "passed"
 });
 });

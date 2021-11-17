@@ -1,35 +1,47 @@
 package com.vytrack.step_definitions;
 
+import com.vytrack.pages.BasePage;
+import com.vytrack.pages.Dashboard;
+import com.vytrack.pages.LoginPage;
+import com.vytrack.pages.QuickLaunchpadPage;
+import com.vytrack.utilities.BrowserUtils;
+import com.vytrack.utilities.ConfigurationReader;
+import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.jsoup.Connection;
+import org.junit.Assert;
 
 public class LoginStepsDefs {
 
-    @Given("the user logs in as {string}")
-    public void the_user_logs_in_as(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    LoginPage loginPage = new LoginPage();
+    BasePage basePage = new BasePage();
+
+
+    @Given("the user is on the login page")
+    public void the_user_is_on_the_login_page() {
+
+        Driver.get().get(ConfigurationReader.get("url"));
+
     }
 
     @When("the user types username {string} and password {string}")
-    public void the_user_types_username_and_password(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_types_username_and_password(String userName, String password) {
+
+        loginPage.login(userName, password);
     }
 
-    @When("the user presses the {string} button")
-    public void the_user_presses_the_button(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
+    @Then("the user should be able to see {string} page")
+    public void the_user_should_be_able_to_see_page(String pageTitle) {
+        BrowserUtils.waitFor(5);
 
-    @Then("the user should be able to see {string}")
-    public void the_user_should_be_able_to_see(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
+        String actualpageSubTitle = basePage.pageSubTitle.getText();
 
+        Assert.assertEquals("Title is not matching", actualpageSubTitle, pageTitle);
+
+
+    }
 
 
 
